@@ -20,8 +20,9 @@
     />
 
     <ImageButton
-        android:src="@drawable/north"
-        android:layout_marginTop="40dp"
+        android:src="@drawable/north"        android:background="@color/colorRojo"
+
+        android:layout_marginTop="15dp"
         android:id="@+id/activity_main_north_button"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -31,14 +32,14 @@
         />
 
     <ImageButton
-        android:src="@drawable/west"
+        android:src="@drawable/west"        android:background="@color/colorRojo"
+
         android:layout_marginLeft="10dp"
         android:id="@+id/activity_main_west_button"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_below="@+id/activity_main_north_button"
         android:text="W"
-
         />
 
     <ImageButton
@@ -48,7 +49,8 @@
         android:layout_height="60dp"
         android:layout_below="@+id/activity_main_north_button"
         android:layout_toRightOf="@+id/activity_main_look_button"
-        android:text="E"
+        android:text="E"        android:background="@color/colorRojo"
+
         />
 
     <ImageButton
@@ -58,11 +60,13 @@
         android:layout_height="60dp"
         android:layout_below="@+id/activity_main_look_button"
         android:layout_toRightOf="@+id/activity_main_west_button"
-        android:text="S"
+        android:text="S"        android:background="@color/colorRojo"
+
         />
 
     <ImageButton
-        android:src="@drawable/look"
+        android:src="@drawable/look"        android:background="@color/colorRojo"
+
         android:id="@+id/activity_main_look_button"
         android:layout_width="60dp"
         android:layout_height="60dp"
@@ -86,19 +90,7 @@
         />
 
     <ImageButton
-        android:id="@+id/activity_main_take"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginRight="10dp"
-        android:layout_margin="3dp"
-        android:layout_below="@+id/activity_main_inventory"
-        android:layout_alignParentRight="true"
-        android:text="Take"
-        android:src="@drawable/takething"
-
-        />
-
-    <ImageButton
+        android:background="@color/colorRojo"
 
         android:id="@+id/activity_main_drop"
         android:layout_width="100dp"
@@ -115,6 +107,7 @@
     <ImageButton
         android:id="@+id/activity_main_help"
         android:layout_width="100dp"
+        android:background="@color/colorRojo"
         android:layout_height="50dp"
         android:layout_marginRight="10dp"
         android:layout_margin="3dp"
@@ -127,18 +120,30 @@
     <TextView
         android:id="@+id/activity_main_scene_text"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="120dp"
         android:layout_marginBottom="3dp"
         android:text="Holaj"
         android:background="@android:color/transparent"
         android:textColor="@color/colorBlanco"
         android:textStyle="bold"
-        android:textSize="14dp"
-        android:padding="12dp"
+        android:textSize="12dp"
+        android:padding="4dp"
         android:fontFamily="casual"
         android:layout_below="@+id/activity_main_scene_image"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:id="@+id/activity_main_take"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Take"
+        android:src="@drawable/takething"
+        android:background="@color/colorRojo"
+
+        android:layout_below="@+id/activity_main_inventory"
+        android:layout_alignLeft="@+id/activity_main_drop"
+        android:layout_alignStart="@+id/activity_main_drop" />
 
 
 </RelativeLayout>

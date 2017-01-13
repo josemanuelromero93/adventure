@@ -12,36 +12,33 @@ import com.chema.adventure.model.Item;
 import com.chema.adventure.model.MapGenerator;
 import com.chema.adventure.model.Room;
 
-public class MainActivity extends AppCompatActivity {
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
-    ImageButton helpbutton;
-    ImageButton northbutton;
-    ImageButton westbutton;
-    ImageButton eastbutton;
-    ImageButton southbutton;
-    ImageButton inventorybutton;
-    ImageButton dropbutton;
-    ImageButton takebutton;
-    ImageButton lookbutton;
-    TextView mainText; // Paso 1
+public class MainActivity extends AppCompatActivity {
+    @BindView(R.id.activity_main_help) ImageButton helpbutton;
+    @BindView(R.id.activity_main_north_button) ImageButton northbutton;
+    @BindView(R.id.activity_main_west_button) ImageButton westbutton;
+    @BindView(R.id.activity_main_east_button) ImageButton eastbutton;
+    @BindView(R.id.activity_main_south_button) ImageButton southbutton;
+    @BindView(R.id.activity_main_inventory) ImageButton inventorybutton;
+    @BindView(R.id.activity_main_drop) ImageButton dropbutton;
+    @BindView(R.id.activity_main_take) ImageButton takebutton;
+    @BindView(R.id.activity_main_look_button) ImageButton lookbutton;
+    @BindView(R.id.activity_main_scene_text) TextView mainText; // Paso 1
+    Inventory inventory = new Inventory();
+    Room currentRoom;
+
+   // @BindView(R.id.activity_main_inventory);
+   // Button pruebabutterknife;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mainText = (TextView) findViewById(R.id.activity_main_scene_text); // Paso 2
-
-        northbutton = (ImageButton) findViewById(R.id.activity_main_north_button);
-        westbutton = (ImageButton) findViewById(R.id.activity_main_west_button);
-        eastbutton = (ImageButton) findViewById(R.id.activity_main_east_button);
-        southbutton = (ImageButton) findViewById(R.id.activity_main_south_button);
-        lookbutton = (ImageButton) findViewById(R.id.activity_main_look_button);
-        inventorybutton = (ImageButton) findViewById(R.id.activity_main_inventory);
-        dropbutton = (ImageButton) findViewById(R.id.activity_main_drop);
-        takebutton = (ImageButton) findViewById(R.id.activity_main_take);
-        helpbutton = (ImageButton) findViewById(R.id.activity_main_help);
-
+        ButterKnife.bind(this);
 
         helpbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,32 +90,31 @@ public class MainActivity extends AppCompatActivity {
         takebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, HelpActivity.class);
-                startActivity(i);
+
             }
         });
 
         inventorybutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, HelpActivity.class);
-                startActivity(i);
+                mainText.setText(inventory.print());
             }
         });
 
         lookbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, HelpActivity.class);
-                startActivity(i);
+                mainText.setText(currentRoom.getDescription() + "\n");
+
             }
         });
 
         dropbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, HelpActivity.class);
-                startActivity(i);
+
+
+
             }
         });
 
@@ -129,8 +125,7 @@ public class MainActivity extends AppCompatActivity {
         mainText.setText(currentRoom.getDescription()); // Paso 3
     }
 
-    Inventory inventory = new Inventory();
-    Room currentRoom;
+
 
 
     private void initGame() {

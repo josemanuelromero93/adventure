@@ -24,6 +24,19 @@ public class Room {
         return items;
     }
 
+    public String getRoomItems() {
+
+        if (this.items == null) {
+            return "";
+        }
+        String result = "";
+
+        for (Item item:this.items){
+            result= result +"<i>" + item.getName() + "</i>\n";
+        }
+        return result;
+    }
+
     public void setItems(LinkedList<Item> items) {
         this.items = items;
     }
