@@ -1,10 +1,11 @@
 package com.chema.adventure.model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Room {
+public class Room implements Serializable{
     private String description;
     private String imageUrl;
     private LinkedList<Item> items;

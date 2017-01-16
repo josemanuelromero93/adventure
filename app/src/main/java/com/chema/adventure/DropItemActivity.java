@@ -34,9 +34,11 @@ public class DropItemActivity extends AppCompatActivity {
         Intent i = getIntent();
         inventory = (Inventory) i.getSerializableExtra(Constants.KEY_INTENT_INVENTORY);
         Room room = (Room)i.getSerializableExtra(Constants.KEY_INTENT_TAKE_FROM_ROOM);
-        List<String> rowNames = null);
+        List<String> rowNames = null;
         if (inventory == null) {
             rowNames = room.getItemNames();
+        } else {
+            rowNames = inventory.getItemNames();
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, rowNames);
         itemList.setAdapter(adapter);

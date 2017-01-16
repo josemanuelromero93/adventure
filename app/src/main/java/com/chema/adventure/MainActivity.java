@@ -99,6 +99,10 @@ public class MainActivity extends AppCompatActivity {
         takebutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, DropItemActivity.class);
+                i.putExtra(Constants.KEY_INTENT_TAKE_FROM_ROOM, currentRoom);
+                startActivityForResult(i, 2);
+
 
             }
         });
@@ -212,6 +216,17 @@ public class MainActivity extends AppCompatActivity {
                 Snackbar.make(mainText, getString(R.string.dropped_item_text) + item.getName(), Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
+        } else if (requestCode == 2) {
+            if (resultCode == RESULT_OK) {
+                int itemPosition = data.getIntExtra(Constants.KEY_INTENT_DROP_ITEM_POSITION, -1);
+                Item item = currentRoom.getItems().get(itemPosition);
+                inventory.add(item);
+                currentRoom.getItems().remove(item);
+
+                Snackbar.make(mainText, getString(R.string.take_item_text) + item.getName(), Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+
         }
     }
 }
