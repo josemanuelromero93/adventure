@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rooms_desc1">[Room 1]: Te encuentras en un aula con las contraventanas semicerradas. Olor a ordenador encendido y cerebro frito impregna tus sentidos</string>
+    <string name="rooms_img1">http://ep00.epimg.net/elpais/imagenes/2015/06/23/buenavida/1435056325_302179_1435317685_noticia_normal.jpg</string>
+
+    <string name="rooms_desc2">[Room 2]: Te deslumbra la luz del sol que se filtra por las ventanas del pasillo. Sientes un escalofrío al ver a un grajo arrastrándose.</string>
+    <string name="rooms_img2">http://www.elrunrun.net/wp-content/uploads/2015/11/fore-660x330.jpg</string>
+
+    <string name="rooms_desc3">[Room 3]: Hay un barra de bar con tapicería roja pasada de moda. Huele a tabaco usado y lágrimas de tango.</string>
+    <string name="rooms_img3">http://www.elmetropolitanodigital.com/wp-content/uploads/2016/02/zika.jpg</string>
+
+    <string name="rooms_desc4">[Room 4]: Se abre la puerta de una habitación y hay un grupo de personas sospechosas. Necesitas salir huyendo.</string>
+    <string name="rooms_img4">http://www.crecimientocreativo.com/home/wp-content/uploads/Bosque_verde_muralesyvinilos_11595597__Monthly_XL.jpg</string>
+
+    <string name="rooms_desc5">[Room 5]: Llegas a la habitación con las vistas más privilegiadas del juego. Eres un gran afortunado</string>
+    <string name="rooms_img5">http://cdn.ecoportal.net/var/ecoportal_net/storage/images/temas_especiales/biodiversidad/que-vale-un-bosque/2055623-1-esl-ES/Que-vale-un-bosque.jpg</string>
+</resources>

@@ -3,6 +3,7 @@ package com.chema.adventure;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
 import butterknife.BindView;
@@ -15,7 +16,9 @@ public class HelpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();                           // ocultar barra titulo arriba (Paso 2)
         setContentView(R.layout.activity_help);
         ButterKnife.bind(this);
         backButton.setOnClickListener(new View.OnClickListener() {

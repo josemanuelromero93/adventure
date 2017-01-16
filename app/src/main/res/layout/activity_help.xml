@@ -9,6 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
+    android:background="@color/colorFondo"
     tools:context="com.chema.adventure.HelpActivity">
 
     <ImageView
@@ -23,16 +24,24 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:textColor="@color/colorBlanco"
+        android:textStyle="bold"
+        android:textSize="18dp"
         android:text="@string/chiquito"
         android:layout_weight="1"
         />
 
+
+
     <Button
         android:id="@+id/activity_help_back_button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2.4"
-        android:text="Back to Adventure"
+        android:layout_height="wrap_content"
+        android:background="#e31928"
+        android:textSize="19dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:text="Vuelve a la aventura"
 
         />
 

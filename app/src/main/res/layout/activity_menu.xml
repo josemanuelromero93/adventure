@@ -26,6 +26,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Arranca la aventura"
+        android:background="#e31928"
+        android:textSize="19dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         android:id="@+id/activity_menu_button_go"
         />
 

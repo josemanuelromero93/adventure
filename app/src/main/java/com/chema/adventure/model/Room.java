@@ -1,10 +1,14 @@
 package com.chema.adventure.model;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Room {
     private String description;
+    private String imageUrl;
     private LinkedList<Item> items;
+
 
     private Room roomNorth;
     private Room roomEast;
@@ -21,6 +25,9 @@ public class Room {
     }
 
     public LinkedList<Item> getItems() {
+        if (items == null) {
+            items = new LinkedList<>();
+        }
         return items;
     }
 
@@ -32,7 +39,7 @@ public class Room {
         String result = "";
 
         for (Item item:this.items){
-            result= result +"<i>" + item.getName() + "</i>\n";
+            result= result + item.getName() + "\n";
         }
         return result;
     }
@@ -78,5 +85,21 @@ public class Room {
         }
 
         items.add(itemfound);
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public List<String> getItemNames() {
+        ArrayList<String> result = new ArrayList<>();
+        for (Item item: items) {
+            result.add(item.getName());
+        }
+        return result;
     }
 }

@@ -1,6 +1,8 @@
 package com.chema.adventure.model;
 
-public class Item {
+import java.io.Serializable;
+
+public class Item implements Serializable {
     private String name;
     private String description;
 
@@ -8,7 +10,7 @@ public class Item {
 
     }
 
-    public Item(String name, String description){
+    public Item (String name, String description){
         this.name = name;
         this.description = description;
     }

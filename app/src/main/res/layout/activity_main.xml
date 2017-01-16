@@ -11,17 +11,9 @@
     android:background="@color/colorFondo"
     tools:context="com.chema.adventure.MainActivity">
 
-    <ImageView
-    android:layout_width="match_parent"
-    android:layout_height="125dp"
-    android:id="@+id/activity_main_scene_image"
-    android:src="@drawable/adventuretime"
-        android:layout_marginBottom="20dp"
-    />
-
     <ImageButton
-        android:src="@drawable/north"        android:background="@color/colorRojo"
-
+        android:src="@drawable/north"
+        android:background="@color/colorRojo"
         android:layout_marginTop="15dp"
         android:id="@+id/activity_main_north_button"
         android:layout_width="60dp"
@@ -109,29 +101,13 @@
         android:layout_width="100dp"
         android:background="@color/colorRojo"
         android:layout_height="50dp"
-        android:layout_marginRight="10dp"
-        android:layout_margin="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="1dp"
         android:layout_below="@+id/activity_main_drop"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:src="@android:drawable/ic_menu_help"
         />
-
-    <TextView
-        android:id="@+id/activity_main_scene_text"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginBottom="3dp"
-        android:text="Holaj"
-        android:background="@android:color/transparent"
-        android:textColor="@color/colorBlanco"
-        android:textStyle="bold"
-        android:textSize="12dp"
-        android:padding="4dp"
-        android:fontFamily="casual"
-        android:layout_below="@+id/activity_main_scene_image"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <ImageButton
         android:id="@+id/activity_main_take"
@@ -144,6 +120,35 @@
         android:layout_below="@+id/activity_main_inventory"
         android:layout_alignLeft="@+id/activity_main_drop"
         android:layout_alignStart="@+id/activity_main_drop" />
+
+    <TextView
+        android:id="@+id/activity_main_scene_text"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:text="Holaj"
+        android:textAlignment="gravity"
+        android:background="@android:color/transparent"
+        android:textColor="@color/colorBlanco"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideOverlay"
+        android:layout_marginBottom="5dp"
+        android:padding="4dp"
+        android:fontFamily="casual"
+        android:layout_below="@+id/activity_main_scene_image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:id="@+id/activity_main_scene_image"
+        android:layout_marginBottom="3dp"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

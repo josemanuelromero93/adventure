@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Adventure</string>
     <string name="chiquito">Lorem fistrum por la gloria de mi madre no puedor ahorarr diodeno fistro la caidita condemor tiene musho peligro</string>
+    <string name="dropped_item_text">"Eliminado "</string>
 </resources>
